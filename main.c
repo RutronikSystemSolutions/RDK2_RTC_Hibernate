@@ -96,7 +96,7 @@ int main(void)
         handle_error();
     }
     printf("\x1b[2J\x1b[;H");
-    printf("RutDevKit-PSoC62 RTC Hibernate Example has Started.\r\n");
+    printf("RDK2 RTC Hibernate Example has Started.\r\n");
 
     /* Initialize RTC */
     result = cyhal_rtc_init(&rtc_obj);
