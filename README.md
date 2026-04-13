@@ -2,17 +2,17 @@
 
 Rutronik Development Kit Programmable System-on-Chip CY8C6245AZI-S3D72 "RTC Hibernate" Example. 
 
-This example demonstrates one of the low power modes: hibernation. RTC alarm is used as a wake-up source.
+This example demonstrates one of the low-power modes: hibernation. RTC alarm is used as a wake-up source.
 
 <img src="images/rdk2_rev1.jpg" style="zoom:80%;" />
 
 ## Requirements
 
-- [ModusToolbox® software](https://www.infineon.com/cms/en/design-support/tools/sdk/modustoolbox-software/) **v2025.4.0** [built with **v3.0**]
+- [ModusToolbox® software](https://www.infineon.com/cms/en/design-support/tools/sdk/modustoolbox-software/) **v3.7** [built with **v3.0**]
 
 ## Supported toolchains (make variable 'TOOLCHAIN')
 
-- GNU Arm&reg; Embedded Compiler v11.3.1 (`GCC_ARM`) - Default value of `TOOLCHAIN`
+- GNU Arm&reg; Embedded Compiler v14.2.1 (`GCC_ARM`) - Default value of `TOOLCHAIN`
 
 ## Using the code example
 
@@ -123,7 +123,7 @@ For a list of supported IDEs and more details, see the "Exporting to IDEs" secti
 
 ### Operation
 
-This example is used to check low power consumption while hibernating with RTC peripheral active. The system is online for a certain amount of time (1 second by default) and then is put to hibernate (2 seconds by default) until the RTC alarm wakes the system up. Hibernate setup function that allows putting the system to hibernation with a desired amount of time in seconds is implemented in the example:
+This example is used to check low power consumption while hibernating with the RTC peripheral active. The system is online for a certain amount of time (1 second by default), then goes into hibernation (2 seconds by default) until the RTC alarm wakes the system. Hibernate setup function that allows putting the system to hibernation with a desired amount of time in seconds is implemented in the example:
 
 `cy_rslt_t Hibernate(cyhal_rtc_t *obj, uint32_t seconds)`
 
@@ -133,7 +133,7 @@ Every time the system wakes up from hibernation, it starts executing from the re
 
 ### Debugging
 
-If you have successfully imported the example, the debug configurations are already prepared to use with the KitProg3, MiniProg4. Open the ModusToolbox perspective and find the Quick Panel. Click on the desired debug launch configuration and wait until the programming completes and the debugging starts.
+If you have successfully imported the example, the debug configurations are already prepared to use with the KitProg3 or MiniProg4. Open the ModusToolbox perspective and find the Quick Panel. Click the desired debug launch configuration and wait until programming completes and debugging starts.
 
 <img src="images/rtc_debug.png" style="zoom:100%;" />
 
